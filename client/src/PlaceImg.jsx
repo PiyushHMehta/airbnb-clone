@@ -5,7 +5,7 @@ export default function PlaceImg({ place, index = 0, className = null }) {
         return ''
     }
     if (!className) {
-        className = 'object-cover rounded-xl w-[150%]'
+        className = 'rounded-xl transform w-[150%] h-[150%] object-cover overflow-hidden'
     }
 
     return (

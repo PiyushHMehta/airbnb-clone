@@ -27,8 +27,11 @@ export default function PlacesPage() {
                 <div className='mt-4'>
                     {places.length > 0 && places.map(place => (
                         <Link to={'/account/places/' + place._id} className='bg-gray-100 p-4 rounded-xl mt-2 flex gap-4 cursor-pointer' key={place.title}>
-                            <div className='flex w-32 h-32 bg-gray-300 rounded-xl grow-1 shrink-0'>
-                                <PlaceImg place={place} />
+                            <div className='flex bg-gray-300 rounded-xl grow-1 shrink-0'>
+                                {/* <PlaceImg place={place} /> */}
+                                <div>
+                                    <img className=' w-32 h-32 object-cover rounded-xl ' src={'http://localhost:4000/uploads/' + place.photos[0]} alt="" />
+                                </div>
                             </div>
                             <div className='grow-0 shrink'>
                                 <h2 className='text-xl'>{place.title}</h2>
